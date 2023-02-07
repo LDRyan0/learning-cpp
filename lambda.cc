@@ -1,5 +1,3 @@
-#include <iostream>
-
 // LAMBDA EXPRESSIONS
 // 		- available in C++11 and above
 // 		- allow to write inline anonymous functions
@@ -9,7 +7,7 @@
 // 		- keep all code in same place, don't have to look around file
 
 //		 1  2     3      4        5      6
-//		[=] () mutable thorw() -> int {		}
+//		[=] () mutable throw() -> int {		}
 // 			
 // 		1 : capture clause
 //			- lambda functions can capture variables from the surrounding scope
@@ -27,6 +25,7 @@
 // 		6 : lambda body
 // 			- can use parameters passed to the lambda function as well as declare new variables
 
+#include <iostream>
 
 int main(int argc, char* argv[]) {
 	int x = 0;

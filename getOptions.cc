@@ -1,6 +1,3 @@
-#include <iostream>
-#include <unistd.h>
-
 // getOpt() is a function included inside <unistd.h> that is a clean way to deal with command line arguments
 //		- parameters line -n 20 -f 4 ...
 // 		- eg:
@@ -14,7 +11,8 @@
 // getOpt_long() 
 // 		either -n 20 -f 4 or --number 20 --frequency 4 ...
 
-
+#include <iostream>
+#include <unistd.h>
 
 void showUsage() { 
 	std::cout << "Usage:" << std::endl;
