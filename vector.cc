@@ -35,8 +35,8 @@ int main() {
 		"\tas a dynamic (resizable) array. The vector has a certain capacity where elements can be\n"
 		"\tstored contiguously. Once the limit is reached the capacity is automatically increased by\n"
 		"\ta factor of 2 by allocating new memory and copying previous data across. std::vector<T>\n"
-		"\tallows for array like access times whilst dealing with the problem of unknown size,\n"
-		"\twith a small penalty on reallaction and reassignment once capacity is reached." << endl; 
+		"\tallows for array like access times whilst dealing with the problem of unknown size, with\n"
+		"\ta small penalty on reallaction and reassignment once capacity is reached." << endl; 
 
 	cout << "\nvec = ";
 	printVector(vec);
@@ -166,33 +166,4 @@ int main() {
 	cout << "\t\t- size() goes to 0" << endl;	
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
