@@ -76,7 +76,7 @@ int main() {
 	cout << "\tvec.reserve(32)\n\t  -> vec.capacity() = " << vec.capacity() << " -> ";
 	vec.reserve(32);
 	cout << vec.capacity() << endl;
-	cout << "\t\t- increases the capacity of the vector" << endl;
+	cout << "\t\t- manually increases the capacity of the vector" << endl;
 	cout << "\t\t- does not change size() of vector" << endl;
 	cout << "\t\t- function does nothing if reserve amount less than current capacity()" << endl;
 	cout << "\t\t- std::length_error if larger than max_size()" << endl;
