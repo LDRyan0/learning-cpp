@@ -32,7 +32,8 @@ template <class T, class U = char> class B {
 };
 
 // can pass non-type parameters into templates
-template <class T, int max> int arrMin(T arr[], int n) { 
+template <class T, int max> 
+int arrMin(T arr[], int n) { 
 	int m = max; 
 	for(int i = 0; i < n; i++)
 		if (arr[i] < m)
