@@ -14,9 +14,9 @@
 #include <iostream>
 #include <unistd.h>
 
-void showUsage() { 
+void showUsage(char* argv[]) { 
 	std::cout << "Usage:" << std::endl;
-	std::cout << "\t./a.out -r <NR_RECEIVES> -c <NR_CHANNELS> -s <NR_SAMPLES> -b <NR_BITS>
+	std::cout << "\t" << argv[0] << " -r <NR_RECEIVES> -c <NR_CHANNELS> -s <NR_SAMPLES> -b <NR_BITS>" << std::endl;
 	std::cout << "Options:" << std::endl;
 	std::cout << "\t-r" << std::endl;
   	std::cout << "\t\tnumber of receivers/antennas" << std::endl;
@@ -32,14 +32,14 @@ void showUsage() {
 
 int main(int argc, char* argv[]) { 
 	std::cout << "COMMAND LINE OPTIONS:" << std::endl;
-	for(int i = 0; i < argc; i++) { 
+	for(int i = 1; i < argc; i++) { 
 		std::cout << "\t" << i << ": " << argv[i] << std::endl;
 	}
 
 	int opt; 
 
 	if(argc==1) {
-		showUsage();
+		showUsage(argv);
 		exit(1);
 	}
 
@@ -58,21 +58,13 @@ int main(int argc, char* argv[]) {
 			std::cout << "Bits:         " << optarg << std::endl;
 			break;
 		case 'h': 
-			showUsage();
+			showUsage(argv);
 			exit(1);
 		default: 
-			showUsage();
+			showUsage(argv);
 			exit(1);
 		}
 	}
-	
-
-	if (optind >= argc) {
-		std::cerr << "Expected argument after options" << std::endl;
-		exit(1);
-	}
-	
-	std::cout << "name argument = " << argv[optind] << std::endl;
 	
 	return 0;
 }

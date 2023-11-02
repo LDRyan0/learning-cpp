@@ -64,7 +64,6 @@ public:
 		return temp;
 	}	
 	
-
 	friend ostream& operator << (ostream& os, const Complex& z);
 };
 
@@ -92,7 +91,7 @@ int main() {
 	cout << "            b = " << b << "\n\n";
 	
 	cout << "       a.real = " << a.real << "\n";
-	cout << "       b.imag = " << a.imag << "\n\n";
+	cout << "       a.imag = " << a.imag << "\n\n";
 	
 	cout << "a.conjugate() = " << a.conjugate() << "\n";
 	cout << "      a.mag() = " << a.mag() << "\n";
@@ -106,6 +105,3 @@ int main() {
 
 	return 0;
 }
-	
-
-
